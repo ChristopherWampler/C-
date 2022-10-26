@@ -1,0 +1,66 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main() {
+
+const double smroomfee {25.0};
+const double lgroomfee {35.0};
+const double salestax {.06};
+
+
+    
+    cout << "Welcome to Chris's Carpet Cleaning Service.\n";
+    cout << "Charges: \n";
+    cout << "Small Rooms $25.00\n"; 
+    cout << "Large Rooms $35.00\n"; 
+    cout << "Sales Tax Rate is 6%\n"; 
+    cout << "This estimate is valid for 30 days. \n";
+    cout << "How many small rooms would you like cleaned? ";
+    
+    double smallrooms {0};
+    cin >> smallrooms;
+    
+    cout << "How many large rooms would you like cleaned? ";
+    double largerooms {0};
+    cin >> largerooms;
+    
+    cout << "================================================================ \n";
+    cout << "Estimate for carpet cleaning service:" << endl;
+    cout << "Number of small rooms: " << smallrooms << endl;
+    cout << "Number of large rooms: " << largerooms << endl;
+    cout << "Price per small room: $" << smroomfee << endl;
+    cout << "Price per large room: $" << lgroomfee << endl;
+    
+    // Large Room Calculation
+    double largeroomtotalcost = largerooms * lgroomfee;
+    
+    // Small Room Calculation
+    double smallroomtotalcost = smallrooms * smroomfee;
+    
+    // Total room cost
+    double totalroom = largeroomtotalcost + smallroomtotalcost;
+    
+    // Tax calculation
+    double totaltax = totalroom * salestax;
+    
+    // Total Cost
+    double total_cost = totaltax + totalroom;
+    
+    cout << "Cost $" << totalroom << endl;
+    cout << "Tax $" << totaltax << endl;
+    cout << "================================================================ \n";
+    cout << "Total Estimate: $" << totalroom + totaltax << endl;
+    cout << "This estimate is valid for 30 days. \n";
+    
+//    cout << "Small Rooms " << smallrooms << endl;
+//    cout << "Large Rooms " << largerooms << endl;
+//    cout << "Small Room Fee $" << smroomfee << endl;
+//    cout << "Large Room Fee $" << lgroomfee << endl;
+//    cout << "Sales Tax $" << salestax << endl;
+
+    int test1;
+    cin >> test1;
+    return 0;
+}
